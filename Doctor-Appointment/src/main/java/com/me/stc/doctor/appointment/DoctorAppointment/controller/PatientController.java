@@ -34,7 +34,7 @@ public class PatientController {
 			throw new PatientNotFoundException("no patients found ");
 		return patient_list;
 	}
-
+    //get by email 
 	@GetMapping(path = "/patients/email/{email}")
 	public Patient find(@PathVariable String email) {
 		Patient patient = service.findByEmail(email).orElse(null);
